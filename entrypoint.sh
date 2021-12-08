@@ -15,6 +15,8 @@ fi
 echo $AWS_ACCESS_KEY:$AWS_SECRET_ACCESS_KEY > /root/.passwd-s3fs
 chmod 600 /root/.passwd-s3fs
 
+mkdir /data
+
 s3fs $AWS_S3_BUCKET /data
 
 /filebrowser --root=/data --address=0.0.0.0 --database=/config/filebrowser.db
