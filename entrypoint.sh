@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check variables and defaults
-if [ -z "${AWS_ACCESS_KEY}" -a -z "${AWS_SECRET_ACCESS_KEY}" ]; then
+if [ -z "${AWS_ACCESS_KEY}" -a -z "${AWS_SECRET_KEY}" ]; then
     echo "You need to provide some credentials!"
     exit
 fi
@@ -12,7 +12,7 @@ if [ -z "${AWS_S3_BUCKET}" ]; then
     exit
 fi
 
-echo $AWS_ACCESS_KEY:$AWS_SECRET_ACCESS_KEY > /root/.passwd-s3fs
+echo $AWS_ACCESS_KEY:$AWS_SECRET_KEY > /root/.passwd-s3fs
 chmod 600 /root/.passwd-s3fs
 
 mkdir /data
