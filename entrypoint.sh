@@ -15,7 +15,7 @@ fi
 # Check variables
 if [ "${DISABLE_AUTH}" ]; then
     echo "You disabled authentication!"
-    additional_flag="--auth.method='none'"
+    additional_flag="--noauth"
 fi
 
 echo $AWS_ACCESS_KEY:$AWS_SECRET_KEY > /root/.passwd-s3fs
